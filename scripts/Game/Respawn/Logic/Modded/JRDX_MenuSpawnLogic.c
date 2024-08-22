@@ -1,4 +1,8 @@
-/*modded class SCR_MenuSpawnLogic : SCR_SpawnLogic // NOT WORKING, LOSES THE SPAWN LOGIC
+/*modded class SCR_MenuSpawnLogic : SCR_SpawnLogic
 {
-	protected FactionKey m_sForcedFaction = "";
-} */
+	override void OnInit(SCR_RespawnSystemComponent owner)
+	{
+		super.OnInit(owner);
+		m_sForcedFaction = "";
+	}
+};*/
