@@ -1,9 +1,14 @@
 modded class SCR_SpawnerAIGroupManagerComponent : SCR_BaseGameModeComponent
 {
+	override void OnPostInit(IEntity owner)
+	{
+		super.OnPostInit(owner);
+		GetGame().GetAIWorld().SetAILimit(1500);
+	}
+	
 	override protected void OnAgentsUpdated(AIAgent agent)
 	{
 		super.OnAgentsUpdated(agent);
-		AIWorld aiWorld = GetGame().GetAIWorld();
-		aiWorld.SetAILimit(1500);
+		GetGame().GetAIWorld().SetAILimit(1500);
 	}
-}
+};

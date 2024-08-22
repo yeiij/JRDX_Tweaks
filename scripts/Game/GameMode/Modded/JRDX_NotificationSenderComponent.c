@@ -1,5 +1,9 @@
 modded class SCR_NotificationSenderComponent : SCR_BaseGameModeComponent
-{		
-	protected EKillFeedType m_iKillFeedType = EKillFeedType.FULL;
-	protected EKillFeedReceiveType m_iReceiveKillFeedType = EKillFeedReceiveType.ALL;
-}
+{
+	override void OnPostInit(IEntity owner)
+	{
+		super.OnPostInit(owner);
+		SetKillFeedType(EKillFeedType.FULL);
+		SetReceiveKillFeedType(EKillFeedReceiveType.ALL);
+	}
+};

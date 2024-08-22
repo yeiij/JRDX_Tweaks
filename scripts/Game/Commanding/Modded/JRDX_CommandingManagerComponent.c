@@ -1,4 +1,8 @@
 modded class SCR_CommandingManagerComponent : SCR_BaseGameModeComponent
 {
-	protected int m_iMaxAIPerGroup = 0;
-}
+	override void OnPostInit(IEntity owner)
+	{
+		super.OnPostInit(owner);
+		SetMaxAIPerGroup(0);
+	}
+};
