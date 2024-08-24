@@ -1,15 +1,9 @@
 modded class SCR_NightModeGameModeComponent : SCR_BaseGameModeComponent
 {
-	override void OnPostInit(IEntity owner)
+	override void EOnInit(IEntity owner)
 	{
-		super.OnPostInit(owner);
+		super.EOnInit(owner);
 		m_bAllowGlobalNightMode = true;
 		EnableGlobalNightMode(true);
-	}
-	
-	override bool CanEnableNightMode()
-	{
-		super.CanEnableNightMode();
-		return true;
 	}
 };
