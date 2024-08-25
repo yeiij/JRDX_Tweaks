@@ -4,6 +4,6 @@ modded class SCR_AIWorld : AIWorld
 	{
 		super.EOnInit(owner);
 		SetAILimit(1500);
-		SetLimitOfActiveAIs(256);
+		SetLimitOfActiveAIs(200);
 	}
 };
