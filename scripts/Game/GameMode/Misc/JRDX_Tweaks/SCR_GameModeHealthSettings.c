@@ -5,7 +5,7 @@ modded class SCR_GameModeHealthSettings : ScriptComponent
 		super.OnPostInit(owner);
 		SetBleedingScale(0.25);
 		SetRegenScale(1.75);
-		SetResilienceHzRegenScale(0.5);
+		SetResilienceHzRegenScale(0.50);
 		SetUnconsciousnessPermitted(true);
 		SetUnconsciousVONPermitted(true);
 	}

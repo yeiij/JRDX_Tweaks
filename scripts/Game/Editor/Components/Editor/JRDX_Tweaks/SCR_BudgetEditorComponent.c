@@ -1,4 +1,4 @@
-modded class SCR_BudgetEditorComponent : SCR_BaseEditorComponen
+modded class SCR_BudgetEditorComponent : SCR_BaseEditorComponent
 {
 	override protected bool IsBudgetCapEnabled()
 	{

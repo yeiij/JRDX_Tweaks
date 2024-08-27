@@ -6,13 +6,16 @@ modded class SCR_AIGroup : ChimeraAIGroup
 		SetMaxMembers(12);
 	}
 	
-	override protected bool SpawnGroupMember(bool snapToTerrain, int index, ResourceName res, bool editMode, bool isLast)
+	
+	override protected void CreateUnitEntities(bool editMode, array<ResourceName> entityResourceNames)
 	{
-		string resourceName = string.ToString(res);
-		resourceName.ToLower();
-		if (resourceName.Contains("civ"))
-			return true;
+		if (entityResourceNames.Count() > 0)
+		{
+			if (!editMode && JRDX_Utils.isCIV(entityResourceNames[0]))
+				return;
+		}
 		
-		return super.SpawnGroupMember(snapToTerrain, index, res, editMode, isLast);
+		super.CreateUnitEntities(editMode, entityResourceNames);
+		
 	}
 };
