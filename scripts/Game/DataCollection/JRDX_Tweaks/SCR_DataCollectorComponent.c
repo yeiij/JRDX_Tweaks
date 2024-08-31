@@ -7,7 +7,7 @@ modded class SCR_DataCollectorComponent : SCR_BaseGameModeComponent
 		super.OnPostInit(owner);
 		m_iOptionalKickingFriendlyPlayerKillPenalty = 2;
 		m_iOptionalKickingFriendlyAIKillPenalty = 1;
-		m_iOptionalKickingFriendlyAIKillPenalty = 100;
 		m_iOptionalKickingBanDuration = 60;
+		m_iOptionalKickingKickPenaltyLimit = 100;
 	}
 };
